@@ -1,6 +1,6 @@
 /* Фантастика */
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -10,7 +10,7 @@ insert into films(
     1, 12, 179, 1
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -20,7 +20,7 @@ insert into films(
     1, 12, 155, 2
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -30,7 +30,7 @@ insert into films(
     1, 12, 113, 3
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -40,7 +40,7 @@ insert into films(
     1, 16, 101, 4
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -50,7 +50,7 @@ insert into films(
     1, 12, 148, 5
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -60,7 +60,7 @@ insert into films(
     1, 18, 106, 6
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -70,7 +70,7 @@ insert into films(
     1, 16, 171, 7
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -80,7 +80,7 @@ insert into films(
     1, 16, 113, 8
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -90,7 +90,7 @@ insert into films(
     1, 16, 126, 9
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -102,7 +102,7 @@ insert into films(
 
 /* Ужасы */
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -112,7 +112,7 @@ insert into films(
     2, 16, 113, 11
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -122,7 +122,7 @@ insert into films(
     2, 16, 116, 12
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -132,7 +132,7 @@ insert into films(
     2, 16, 98, 13
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -142,7 +142,7 @@ insert into films(
     2, 18, 100, 14
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -152,7 +152,7 @@ insert into films(
     2, 18, 103, 15
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -162,7 +162,7 @@ insert into films(
     2, 16, 122, 16
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -172,7 +172,7 @@ insert into films(
     2, 18, 126, 17
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -182,7 +182,7 @@ insert into films(
     2, 18, 111, 18
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -192,7 +192,7 @@ insert into films(
     2, 16, 144, 19
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -204,7 +204,7 @@ insert into films(
 
 /* Комедии */
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -214,7 +214,7 @@ insert into films(
     3, 16, 116, 21
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -224,7 +224,7 @@ insert into films(
     3, 0, 103, 22
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -234,7 +234,7 @@ insert into films(
     3, 18, 112, 23
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -244,7 +244,7 @@ insert into films(
     3, 16, 93, 24
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -254,7 +254,7 @@ insert into films(
     3, 6, 118, 25
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -264,7 +264,7 @@ insert into films(
     3, 12, 98, 26
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -274,7 +274,7 @@ insert into films(
     3, 18, 89, 27
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -284,7 +284,7 @@ insert into films(
     3, 16, 86, 28
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -294,7 +294,7 @@ insert into films(
     3, 18, 106, 29
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -306,7 +306,7 @@ insert into films(
 
 /* Драмы */
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -316,7 +316,7 @@ insert into films(
     4, 12, 142, 31
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -326,7 +326,7 @@ insert into films(
     4, 16, 155, 32
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -336,7 +336,7 @@ insert into films(
     4, 16, 130, 33
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -346,7 +346,7 @@ insert into films(
     4, 16, 169, 34
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -356,7 +356,7 @@ insert into films(
     4, 18, 133, 35
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -366,7 +366,7 @@ insert into films(
     4, 16, 195, 36
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -376,7 +376,7 @@ insert into films(
     4, 18, 177, 37
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -386,7 +386,7 @@ insert into films(
     4, 16, 189, 38
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -396,7 +396,7 @@ insert into films(
     4, 16, 142, 39
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -408,7 +408,7 @@ insert into films(
 
 /* Фэнтези */
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -418,7 +418,7 @@ insert into films(
     5, 12, 105, 41
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -428,7 +428,7 @@ insert into films(
     5, 12, 143, 42
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -438,7 +438,7 @@ insert into films(
     5, 12, 144, 43
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -448,7 +448,7 @@ insert into films(
     5, 12, 169, 44
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -458,7 +458,7 @@ insert into films(
     5, 12, 182, 45
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -468,7 +468,7 @@ insert into films(
     5, 12, 187, 46
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -478,7 +478,7 @@ insert into films(
     5, 12, 144, 47
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -488,7 +488,7 @@ insert into films(
     5, 12, 228, 48
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -498,7 +498,7 @@ insert into films(
     5, 12, 236, 49
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -510,7 +510,7 @@ insert into films(
 
 /* Приключения */
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -520,7 +520,7 @@ insert into films(
     6, 12, 143, 51
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -530,7 +530,7 @@ insert into films(
     6, 16, 236, 52
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -540,7 +540,7 @@ insert into films(
     6, 0, 85, 53
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -550,7 +550,7 @@ insert into films(
     6, 12, 115, 54
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -560,7 +560,7 @@ insert into films(
     6, 12, 118, 55
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -570,7 +570,7 @@ insert into films(
     6, 12, 127, 56
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -580,7 +580,7 @@ insert into films(
     6, 12, 114, 57
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -590,7 +590,7 @@ insert into films(
     6, 12, 136, 58
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -600,7 +600,7 @@ insert into films(
     6, 12, 124, 59
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -612,7 +612,7 @@ insert into films(
 
 /* Детективы */
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -622,7 +622,7 @@ insert into films(
     7, 18, 128, 61
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -632,7 +632,7 @@ insert into films(
     7, 16, 113, 62
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -642,7 +642,7 @@ insert into films(
     7, 16, 109, 63
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -652,7 +652,7 @@ insert into films(
     7, 18, 127, 64
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -662,7 +662,7 @@ insert into films(
     7, 12, 128, 65
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -672,7 +672,7 @@ insert into films(
     7, 16, 138, 66
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -682,7 +682,7 @@ insert into films(
     7, 18, 105, 67
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -692,7 +692,7 @@ insert into films(
     7, 16, 151, 68
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -702,7 +702,7 @@ insert into films(
     7, 16, 144, 69
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -714,7 +714,7 @@ insert into films(
 
 /* Биографические */
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -724,7 +724,7 @@ insert into films(
     8, 16, 165, 71
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -734,7 +734,7 @@ insert into films(
     8, 18, 108, 72
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -744,7 +744,7 @@ insert into films(
     8, 12, 141, 73
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -754,7 +754,7 @@ insert into films(
     8, 18, 118, 74
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -764,7 +764,7 @@ insert into films(
     8, 18, 139, 75
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -774,7 +774,7 @@ insert into films(
     8, 18, 150, 76
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -784,7 +784,7 @@ insert into films(
     8, 16, 110, 77
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -794,7 +794,7 @@ insert into films(
     8, 18, 180, 78
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -804,7 +804,7 @@ insert into films(
     8, 12, 120, 79
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -816,7 +816,7 @@ insert into films(
 
 /* Триллеры */
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -826,7 +826,7 @@ insert into films(
     9, 16, 150, 81
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -836,7 +836,7 @@ insert into films(
     9, 16, 146, 82
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -846,7 +846,7 @@ insert into films(
     9, 18, 122, 83
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -856,7 +856,7 @@ insert into films(
     9, 18, 108, 84
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -866,7 +866,7 @@ insert into films(
     9, 18, 100, 85
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -876,7 +876,7 @@ insert into films(
     9, 16, 93, 86
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -886,7 +886,7 @@ insert into films(
     9, 16, 129, 87
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -896,7 +896,7 @@ insert into films(
     9, 18, 102, 88
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -906,7 +906,7 @@ insert into films(
     9, 16, 114, 89
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -918,7 +918,7 @@ insert into films(
 
 /* Боевики */
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -928,7 +928,7 @@ insert into films(
     10, 18, 100, 91
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -938,7 +938,7 @@ insert into films(
     10, 18, 153, 92
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -948,7 +948,7 @@ insert into films(
     10, 16, 130, 93
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -958,7 +958,7 @@ insert into films(
     10, 16, 101, 94
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -968,7 +968,7 @@ insert into films(
     10, 18, 123, 95
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -978,7 +978,7 @@ insert into films(
     10, 16, 114, 96
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -988,7 +988,7 @@ insert into films(
     10, 16, 124, 97
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -998,7 +998,7 @@ insert into films(
     10, 16, 102, 98
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (
@@ -1008,7 +1008,7 @@ insert into films(
     10, 18, 113, 99
 );
 insert into films(
-    name, description, year,
+    "name", description, "year",
     genre_id, minimal_age,
     duration_in_minutes, file_id
 ) values (

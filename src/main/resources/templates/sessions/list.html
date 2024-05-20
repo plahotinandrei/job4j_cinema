@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link th:href = "@{/css/bootstrap.min.css}" rel="stylesheet">
+    <script th:src="@{/js/jquery-3.7.0.min.js}"></script>
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+    <title>Расписание</title>
+</head>
+<body>
+    <header th:insert="blocks/header :: header"></header>
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12 d-flex mb-4" th:each="filmSession: ${sessions}">
+                <div class="card w-100 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title" th:text="${filmSession.filmName}"></h5>
+                        <p class="card-text">
+                            <span th:text="${filmSession.filmMinimalAge}"></span>+, <span th:text="${filmSession.filmGenre}"></span>
+                        </p>
+                        <p class="card-text">
+                            Начало: <span th:text="${filmSession.startTime}"></span>
+                        </p>
+                        <p class="card-text">
+                            Продолжительность <span th:text="${filmSession.filmDurationInMinutes}"></span> мин.
+                        </p>
+                        <p class="card-text">
+                            Зал <span th:text="${filmSession.hallName}"></span>
+                        </p>
+                        <p class="card-text">
+                            Цена билета <span th:text="${filmSession.price}"></span> руб.
+                        </p>
+                        <a th:href="@{/sessions/{sessionId}(sessionId=${filmSession.id})}" class="btn btn-primary">Купить билет</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer th:insert="blocks/footer :: footer"></footer>
+</body>
+</html>

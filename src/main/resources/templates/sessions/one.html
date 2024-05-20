@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link th:href = "@{/css/bootstrap.min.css}" rel="stylesheet">
+    <script th:src="@{/js/jquery-3.7.0.min.js}"></script>
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+    <title>Расписание</title>
+</head>
+<body>
+    <header th:insert="blocks/header :: header"></header>
+    <div class="container my-4">
+        <div class="row">
+            <h1 class="title h2 col-12">Покупка билета</h1>
+            <p class="text-body col-12 mb-0">Зал: <span th:text="${filmSession.hallName}"></span></p>
+            <p class="text-body col-12" th:text="${filmSession.hallDescription}"></p>
+            <p class="text-body col-12 mb-0">Начало: <b th:text="${filmSession.startTime}"></b></p>
+            <p class="text-body col-12">Продолжительность: <span th:text="${filmSession.filmDurationInMinutes}"></span> мин.</p>
+            <p class="text-body col-12">Цена: <span th:text="${filmSession.price}"></span> руб.</p>
+            <form class="col-12" th:action="@{/tickets/buy}" method="post">
+                <input type="hidden" name="sessionId" th:value="${filmSession.sessionId}">
+                <input type="hidden" name="userId" th:value="${user.id}">
+                <div class="d-flex">
+                    <div class="mr-3">
+                        <label for="rowNumber"><b>Ряд</b></label>
+                        <select class="form-control" id="rowNumber" name="rowNumber">
+                            <option
+                                    th:each="row : ${rows}"
+                                    th:value="${row}"
+                                    th:text="${row}"
+                            ></option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="placeNumber"><b>Место</b></label>
+                        <select class="form-control" id="placeNumber" name="placeNumber">
+                            <option
+                                    th:each="place : ${places}"
+                                    th:value="${place}"
+                                    th:text="${place}"
+                            ></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="d-flex mt-2">
+                    <a class="btn btn-danger mr-3" th:href="@{/sessions}">Отмена</a>
+                    <button class="btn btn-success" type="submit">Купить</button>
+                </div>
+            </form>
+        </div>
+        <div class="row mt-5">
+            <div class="col-12 col-md-6 col-lg-3">
+                <img th:src="@{/{fileId}(fileId=${filmSession.filePath})}" class="img-fluid rounded-start w-100" th:alt="${filmSession.fileName}">
+            </div>
+            <div class="col-12 col-md-6 col-lg-9">
+                <h1 th:text="${filmSession.filmName}" class="title h3"></h1>
+                <p th:text="${filmSession.filmDescription}" class="text-body"></p>
+                <p class="text-body">
+                    <span th:text="${filmSession.filmMinimalAge}"></span>+, <span th:text="${filmSession.filmGenre}"></span>
+                </p>
+                <p class="text-body">
+                    Год: <span th:text="${filmSession.filmYear}"></span>
+                </p>
+                <p class="text-body">
+                    Продолжительность: <span th:text="${filmSession.filmDurationInMinutes}"></span> мин.
+                </p>
+            </div>
+        </div>
+    </div>
+    <footer th:insert="blocks/footer :: footer"></footer>
+</body>
+</html>

@@ -2,10 +2,8 @@ package ru.job4j.cinema.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ru.job4j.cinema.dto.FilmPreview;
 import ru.job4j.cinema.dto.SessionDetails;
 import ru.job4j.cinema.dto.SessionPreview;
-import ru.job4j.cinema.model.Hall;
 import ru.job4j.cinema.model.Session;
 import ru.job4j.cinema.repository.HallRepository;
 import ru.job4j.cinema.repository.SessionRepository;
@@ -31,25 +29,29 @@ public class SimpleSessionService implements SessionService {
         Optional<Session> sessionOptional = sessionRepository.findById(id);
         if (sessionOptional.isPresent()) {
             var session = sessionOptional.get();
-            var film = filmService.findById(session.getFilmId()).get();
-            var hall = hallRepository.findById(session.getHallId()).get();
-            return Optional.of(SessionDetails.builder()
-                            .sessionId(session.getId())
-                            .filmName(film.getName())
-                            .filmDescription(film.getDescription())
-                            .filmYear(film.getYear())
-                            .filmGenre(film.getGenre())
-                            .filmMinimalAge(film.getMinimalAge())
-                            .fileName(film.getFileName())
-                            .filePath(film.getFilePath())
-                            .hallName(hall.getName())
-                            .hallDescription(hall.getDescription())
-                            .hallRowCount(hall.getRowCount())
-                            .hallPlaceCount(hall.getPlaceCount())
-                            .startTime(dateFormatter(session.getStartTime()))
-                            .filmDurationInMinutes(film.getDurationInMinutes())
-                            .price(session.getPrice())
-                    .build());
+            var filmOptional = filmService.findById(session.getFilmId());
+            var hallOptional = hallRepository.findById(session.getHallId());
+            if (filmOptional.isPresent() && hallOptional.isPresent()) {
+                var film = filmOptional.get();
+                var hall = hallOptional.get();
+                return Optional.of(SessionDetails.builder()
+                        .sessionId(session.getId())
+                        .filmName(film.getName())
+                        .filmDescription(film.getDescription())
+                        .filmYear(film.getYear())
+                        .filmGenre(film.getGenre())
+                        .filmMinimalAge(film.getMinimalAge())
+                        .fileName(film.getFileName())
+                        .filePath(film.getFilePath())
+                        .hallName(hall.getName())
+                        .hallDescription(hall.getDescription())
+                        .hallRowCount(hall.getRowCount())
+                        .hallPlaceCount(hall.getPlaceCount())
+                        .startTime(dateFormatter(session.getStartTime()))
+                        .filmDurationInMinutes(film.getDurationInMinutes())
+                        .price(session.getPrice())
+                        .build());
+            }
         }
         return Optional.empty();
     }

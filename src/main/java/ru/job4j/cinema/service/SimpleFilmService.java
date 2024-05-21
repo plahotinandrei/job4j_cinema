@@ -3,7 +3,9 @@ package ru.job4j.cinema.service;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.job4j.cinema.dto.FilmPreview;
+import ru.job4j.cinema.model.File;
 import ru.job4j.cinema.model.Film;
+import ru.job4j.cinema.model.Genre;
 import ru.job4j.cinema.repository.FileRepository;
 import ru.job4j.cinema.repository.FilmRepository;
 import ru.job4j.cinema.repository.GenreRepository;
@@ -30,8 +32,8 @@ public class SimpleFilmService implements FilmService {
         Optional<Film> filmOptional = filmRepository.findById(id);
         if (filmOptional.isPresent()) {
             var film = filmOptional.get();
-            var genre = genreRepository.findById(film.getGenreId()).get();
-            var file = fileRepository.findById(film.getFileId()).get();
+            var genre = genreRepository.findById(film.getGenreId()).orElse(new Genre());
+            var file = fileRepository.findById(film.getFileId()).orElse(new File());
             return Optional.of(FilmPreview.builder()
                             .name(film.getName())
                             .description(film.getDescription())

@@ -21,6 +21,7 @@
                     <span th:text="${ticketDetails.filmName}"></span>. <span th:text="${ticketDetails.filmGenre}"></span>, <span th:text="${ticketDetails.filmMinimalAge}"></span>+
                 </p>
                 <p>Зал: <span th:text="${ticketDetails.hallName}"></span></p>
+                <p><span th:text="${ticketDetails.rowNumber}"></span> ряд <span th:text="${ticketDetails.placeNumber}"></span> место</p>
                 <p>Начало: <span th:text="${ticketDetails.startTime}"></span></p>
                 <p>Продолжительность: <span th:text="${ticketDetails.filmDurationInMinutes}"></span> мин.</p>
                 <p>Цена: <span th:text="${ticketDetails.price}"></span> руб.</p>

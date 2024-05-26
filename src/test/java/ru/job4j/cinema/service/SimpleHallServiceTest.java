@@ -1,6 +1,6 @@
 package ru.job4j.cinema.service;
 
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import ru.job4j.cinema.model.Hall;
 import ru.job4j.cinema.repository.HallRepository;
@@ -12,12 +12,12 @@ import static org.mockito.Mockito.when;
 
 class SimpleHallServiceTest {
 
-    private HallRepository hallRepository;
+    private static HallRepository hallRepository;
 
-    private HallService hallService;
+    private static HallService hallService;
 
-    @BeforeEach
-    public void init() {
+    @BeforeAll
+    public static void init() {
         hallRepository = mock(HallRepository.class);
         hallService = new SimpleHallService(hallRepository);
     }

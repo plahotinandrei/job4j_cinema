@@ -1,6 +1,6 @@
 package ru.job4j.cinema.service;
 
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import ru.job4j.cinema.model.User;
 import ru.job4j.cinema.repository.UserRepository;
@@ -12,12 +12,12 @@ import static org.mockito.Mockito.when;
 
 class SimpleUserServiceTest {
 
-    private UserRepository userRepository;
+    private static UserRepository userRepository;
 
-    private UserService userService;
+    private static UserService userService;
 
-    @BeforeEach
-    public void init() {
+    @BeforeAll
+    public static void init() {
         userRepository = mock(UserRepository.class);
         userService = new SimpleUserService(userRepository);
 

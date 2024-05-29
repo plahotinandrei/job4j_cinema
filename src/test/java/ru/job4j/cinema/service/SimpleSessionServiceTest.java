@@ -101,7 +101,7 @@ class SimpleSessionServiceTest {
     @Test
     public void whenFindByIdThenSessionPreview() {
         var sessionDetails = SessionDetails.builder()
-                .sessionId(2).filmName("Дюна").filmDescription("Описание фильма дюна")
+                .id(2).filmName("Дюна").filmDescription("Описание фильма дюна")
                 .filmYear(2021).filmGenre("Комедия").filmMinimalAge(12)
                 .fileName("image2.jpg").filePath("files/image2.jpg").hallName("name2").hallDescription("description2")
                 .hallRowCount(6).hallPlaceCount(6).startTime("15.06.2024 10:00")

@@ -19,7 +19,7 @@
             <p class="text-body col-12">Продолжительность: <span th:text="${filmSession.filmDurationInMinutes}"></span> мин.</p>
             <p class="text-body col-12">Цена: <span th:text="${filmSession.price}"></span> руб.</p>
             <form class="col-12" th:action="@{/tickets/buy}" method="post">
-                <input type="hidden" name="sessionId" th:value="${filmSession.sessionId}">
+                <input type="hidden" name="sessionId" th:value="${filmSession.id}">
                 <input type="hidden" name="userId" th:value="${user.id}">
                 <div class="d-flex">
                     <div class="mr-3">

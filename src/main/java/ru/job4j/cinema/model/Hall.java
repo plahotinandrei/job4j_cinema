@@ -1,15 +1,14 @@
 package ru.job4j.cinema.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+
 import java.util.Map;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class Hall {
 
     public static final Map<String, String> COLUMN_MAPPING = Map.of(

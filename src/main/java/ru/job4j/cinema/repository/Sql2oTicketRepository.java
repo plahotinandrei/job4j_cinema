@@ -1,6 +1,8 @@
 package ru.job4j.cinema.repository;
 
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 import org.sql2o.Sql2o;
 import org.sql2o.Sql2oException;
@@ -12,6 +14,8 @@ import java.util.Optional;
 public class Sql2oTicketRepository implements TicketRepository {
 
     private final Sql2o sql2o;
+
+    private final static Logger LOG = LoggerFactory.getLogger(Sql2oTicketRepository.class.getName());
 
     @Override
     public Optional<Ticket> save(Ticket ticket) {
@@ -29,7 +33,7 @@ public class Sql2oTicketRepository implements TicketRepository {
             ticket.setId(generatedId);
             return Optional.of(ticket);
         } catch (Sql2oException e) {
-            e.printStackTrace();
+            LOG.error("Sql2oException in Sql2oTicketRepository", e);
         }
         return Optional.empty();
     }

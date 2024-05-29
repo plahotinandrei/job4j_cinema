@@ -2,12 +2,13 @@ package ru.job4j.cinema.model;
 
 import lombok.*;
 import java.util.Map;
-import java.util.Objects;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode(of = {"id"})
+@ToString
 public class Film {
 
     public static final Map<String, String> COLUMN_MAPPING = Map.of(
@@ -36,21 +37,4 @@ public class Film {
     private int durationInMinutes;
 
     private int fileId;
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        Film film = (Film) o;
-        return id == film.id;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
-    }
 }

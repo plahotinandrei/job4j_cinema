@@ -3,12 +3,13 @@ package ru.job4j.cinema.model;
 import lombok.*;
 import java.sql.Timestamp;
 import java.util.Map;
-import java.util.Objects;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode(of = {"id"})
+@ToString
 public class Session {
 
     public static final Map<String, String> COLUMN_MAPPING = Map.of(
@@ -31,21 +32,4 @@ public class Session {
     private Timestamp endTime;
 
     private int price;
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        Session session = (Session) o;
-        return id == session.id;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
-    }
 }

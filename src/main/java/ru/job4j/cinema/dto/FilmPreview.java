@@ -2,9 +2,11 @@ package ru.job4j.cinema.dto;
 
 import lombok.Builder;
 import lombok.Getter;
+import lombok.ToString;
 
 @Getter
 @Builder
+@ToString
 public class FilmPreview {
 
     private String name;

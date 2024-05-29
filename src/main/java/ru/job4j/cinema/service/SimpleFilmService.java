@@ -1,8 +1,10 @@
 package ru.job4j.cinema.service;
 
 import lombok.RequiredArgsConstructor;
+import org.mapstruct.factory.Mappers;
 import org.springframework.stereotype.Service;
 import ru.job4j.cinema.dto.FilmPreview;
+import ru.job4j.cinema.mapper.FilmMapper;
 import ru.job4j.cinema.model.File;
 import ru.job4j.cinema.model.Film;
 import ru.job4j.cinema.model.Genre;
@@ -27,23 +29,16 @@ public class SimpleFilmService implements FilmService {
 
     private final FileService fileService;
 
+    private final FilmMapper filmMapper = Mappers.getMapper(FilmMapper.class);
+
     @Override
     public Optional<FilmPreview> findById(int id) {
-        Optional<Film> filmOptional = filmRepository.findById(id);
+        var filmOptional = filmRepository.findById(id);
         if (filmOptional.isPresent()) {
             var film = filmOptional.get();
             var genre = genreRepository.findById(film.getGenreId()).orElse(new Genre());
             var file = fileRepository.findById(film.getFileId()).orElse(new File());
-            return Optional.of(FilmPreview.builder()
-                            .name(film.getName())
-                            .description(film.getDescription())
-                            .year(film.getYear())
-                            .genre(genre.getName())
-                            .minimalAge(film.getMinimalAge())
-                            .durationInMinutes(film.getDurationInMinutes())
-                            .fileName(file.getName())
-                            .filePath(file.getPath())
-                    .build());
+            return Optional.of(filmMapper.getFilmPreview(film, genre, file));
         }
         return Optional.empty();
     }
@@ -53,15 +48,7 @@ public class SimpleFilmService implements FilmService {
         var genres = genreService.findAll();
         var files = fileService.findAll();
         return filmRepository.findAll().stream()
-                .collect(Collectors.toConcurrentMap(Film::getId, (film) -> FilmPreview.builder()
-                        .name(film.getName())
-                        .description(film.getDescription())
-                        .year(film.getYear())
-                        .genre(genres.get(film.getGenreId()).getName())
-                        .minimalAge(film.getMinimalAge())
-                        .durationInMinutes(film.getDurationInMinutes())
-                        .fileName(files.get(film.getFileId()).getName())
-                        .filePath(files.get(film.getFileId()).getPath())
-                        .build()));
+                .collect(Collectors.toConcurrentMap(Film::getId, (film) -> filmMapper
+                                .getFilmPreview(film, genres.get(film.getGenreId()), files.get(film.getFileId()))));
     }
 }
